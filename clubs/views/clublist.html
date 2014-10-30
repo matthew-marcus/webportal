@@ -1,0 +1,10 @@
+<div class="container">
+<h1>Club Search</h1>
+	<div>
+		<input class="searchBar mb2" ng-model="ClubSearch" name="ClubSearch" placeholder="Search for a club..." autofocus tabindex=1 >
+	</div>
+	<div class="clubList" ng-repeat="club in clubs | filter: ClubSearch">
+		<a href="#{{ club.id }}"><p>{{ club.code }} - {{ club.name }}<br>
+		Phone Number: {{ club.phonenumber }}</p></a>
+	</div>
+</div>
